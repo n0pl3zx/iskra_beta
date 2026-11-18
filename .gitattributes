@@ -1,0 +1,9 @@
+# Windows-пакетные файлы должны оставаться с CRLF
+*.bat text eol=crlf
+
+# Текстовые файлы проекта — с LF, чтобы не было лишних diff
+*.rs text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf

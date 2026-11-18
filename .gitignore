@@ -1,0 +1,23 @@
+# Сборка Rust (папка target и готовые бинарники)
+/target/
+*.exe
+*.tmp
+*.pdb
+
+# Тестовые данные: создаются тестом протокола заново
+/testdata/
+
+# Личные данные и старые копии — НЕ публикуем:
+# backups/ содержит реальную базу с сообщениями,
+# backup_telegram/ и versions/ — полные копии проекта с exe.
+/backups/
+/backup_telegram/
+/versions/
+
+# Локальные настройки редакторов и ОС
+/.idea/
+/.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini

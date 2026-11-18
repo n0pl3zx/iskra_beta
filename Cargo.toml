@@ -1,0 +1,30 @@
+[package]
+name = "iskra"
+version = "0.1.0"
+edition = "2021"
+description = "Искра — мессенджер для ПК на Rust"
+authors = ["Iskra contributors"]
+license = "MIT"
+readme = "README.md"
+keywords = ["messenger", "chat", "egui", "desktop"]
+
+[features]
+# Только для разработки: снимок окна в PNG (EFRAME_SCREENSHOT_TO=путь.png)
+screenshot = ["eframe/__screenshot"]
+
+[dependencies]
+eframe = "0.29.1"
+egui = "0.29.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+windows-sys = { version = "0.52", features = ["Win32_Foundation", "Win32_System_Time"] }
+
+[profile.release]
+opt-level = 2
+lto = "thin"
+codegen-units = 4
+strip = true
+
+[profile.dev]
+opt-level = 1
