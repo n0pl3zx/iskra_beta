@@ -7,6 +7,12 @@ import subprocess
 import sys
 import time
 
+# На Windows в CI стандартный вывод часто cp1252 — русские сообщения теста
+# не печатаются. Явно включаем UTF-8, чтобы проверки не падали из-за локали.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "testdata")
 HOST = "127.0.0.1"
