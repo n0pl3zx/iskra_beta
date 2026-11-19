@@ -1,5 +1,8 @@
 # Искра (Iskra) — мессенджер для ПК
 
+[![Build](https://github.com/n0pl3zx/iskra_beta/actions/workflows/build.yml/badge.svg)](https://github.com/n0pl3zx/iskra_beta/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Тёмный настольный мессенджер в духе Telegram, написанный целиком на **Rust**
 (GUI — `egui`/`eframe`, сеть — TCP + JSON). Работает и на одном компьютере,
 и в локальной сети между несколькими ПК.
